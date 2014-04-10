@@ -39,7 +39,7 @@ function SSDP(opts) {
 
   this._logger = opts.logger
   if(!this._logger) {
-    nop = function(){};
+    var nop = function(){};
     this._logger = {
       trace: nop,
       debug: nop,
