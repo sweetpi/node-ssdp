@@ -5,7 +5,6 @@ var dgram = require('dgram')
   , dns = require('dns')
   , os = require('os')
   , util = require('util')
-  , Logger = require('./logger')
 
 
 var httpHeader = /HTTP\/\d{1}\.\d{1} \d+ .*/
@@ -38,7 +37,17 @@ function SSDP(opts) {
   
   EE.call(self)
 
-  this._logger = Logger(opts)
+  this._logger = opts.logger
+  if(!this._logger) {
+    nop = function(){};
+    this._logger = {
+      trace: nop,
+      debug: nop,
+      info: nop,
+      warn: nop,
+      error: nop
+    };
+  }
   
   this._init(opts)
   this._start()

@@ -1,10 +1,13 @@
+Fork of [node-ssdp](https://github.com/diversario/node-ssdp) with removed logging dependency.
+
 ## Installation
 
 ```sh
-npm install node-ssdp
+npm install node-ssdp-lite
 ```
 
-There is another package called `ssdp` which is the original unmaintained version. Make sure to install `node-ssdp` instead.
+Orginal README:
+---------------
 
 ## Usage - Client
 
@@ -61,7 +64,7 @@ SSDP constructor accepts an optional configuration object. At the moment, the fo
 
 - `log` _Boolean_ Enable/disable logging. Default: false.
 - `logLevel` _String_ Specifies log level to print. Possible values: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`. Defaults to `ERROR`.
-- `ssdpSig` _String_ SSDP signature. Default: 'node.js/0.0.8 UPnP/1.1 node-ssdp/0.1.1'
+- `ssdpSig` _String_ SSDP signature. Default: 'node.js/0.0.8 UPnP/1.1 node-ssdp-lite/0.1.1'
 - `ssdpIp` _String_ SSDP multicast group. Default: '239.255.255.250'
 - `ssdpPort` _Number_ SSDP port. Default: 1900
 - `ssdpTtl` _Number_ Multicast TTL. Default: 1
@@ -71,7 +74,7 @@ SSDP constructor accepts an optional configuration object. At the moment, the fo
 
 ## Author
 
-Initial commit of this module is a clone of https://bitbucket.org/Xedecimal/node-ssdp, commit 0c6cd0a (2012-03-21).
+Initial commit of this module is a clone of https://bitbucket.org/Xedecimal/node-ssdp-lite, commit 0c6cd0a (2012-03-21).
 
 Forked with author's permission.
 
